@@ -11,7 +11,7 @@ const Navbar = ()=> {
                 <a href='/'>ejReact</a>
                 </div>
              <div className='links'>
-             <a href='https://github.com/martin2844'>GitHub</a>
+             <a href='https://github.com/martin2844/ej-radio'>GitHub</a>
              <a href='https://github.com/martin2844/gatsby-cv-site'>Acerca de</a> 
              </div>
         </div>
