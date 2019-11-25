@@ -1,68 +1,34 @@
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+## Ejercicio técnico para Radio M.
 
-## Available Scripts
+# Consigna:
 
-In the project directory, you can run:
+En nuestro sitio necesitamos crear un bloque de notas, las notas son dinámicas y se obtienen de un endpoint dado. Lenguajes permitidos HTML, CSS y JS (incluye frameworks), el programador es libre de usar los que crea necesarios para resolver el ejercicio.
 
-### `yarn start`
+Endpoint de notas: https://www.mocky.io/v2/5cfbb853300000da1d0a8bd2
 
-Runs the app in the development mode.<br />
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+A tener es cuenta
 
-The page will reload if you make edits.<br />
-You will also see any lint errors in the console.
+1. Son tres bloques de notas, con título y la imagen de la nota en cada uno
+La información de las notas a mostrar se debe levantar directamente desde este endpoint https://www.mocky.io/v2/5cfbb853300000da1d0a8bd2 (devuelve la información a mostrar en cada bloque en formato JSON)
 
-### `yarn test`
+2. Tener en cuenta que el endpoint es siempre el mismo y la información que devuelve podría variar
 
-Launches the test runner in the interactive watch mode.<br />
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+3. Los bloques de notas deben ser clickeables y llevarte al link de la nota correspondiente, se deja a criterio del programador que zona o zonas del bloque son linkeables para ingresar a la nota.
 
-### `yarn build`
 
-Builds the app for production to the `build` folder.<br />
-It correctly bundles React in production mode and optimizes the build for the best performance.
+4. Tiene que ser responsive, esto quiere decir que el sitio debe verse bien tanto en desktop como en mobile
 
-The build is minified and the filenames include the hashes.<br />
-Your app is ready to be deployed!
+5. El bloque principal debe estar contenido dentro de un container con un ancho máximo de X píxeles, se puede usar bootstrap, otra librería para grillado o resolverlo uno mismo
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+6. Se debe utilizar alguna tipografía de Google Fonts (https://fonts.google.com/) para los títulos de las notas
 
-### `yarn eject`
+# Como yo lo resolvería:
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+1. Sinceramente, la consigna es simple, para realizarlo de modo eficiente, usaria Javascript puro con async await para obtener la info. Como el puesto es para React. Vamos a usar este Framework y hacer un SPA con él. Usando Axios con react vamos a tener algunos beneficios a la hora de trabajar con apis. Como por ejemplo que la información ya viene Stringificada (?), y la podemos meter directo al Virtual Dom.
+2. Una vez obtenida la data la vamos a pasar al state, con un simple Hook. Si la información cambia, se vuelve a hacer un render del componente de las notas a mostrar y se va actualizar. Con esto, nos aseguramos de que si cambia la info de la API, cambia nuestro display.
+3. Esto lo podemos hacer, haciendo que todo el componente tenga un anchor tag, y directamente nos lleve a la nota. Esto es a criterio nuestro, siendo el formato de las tarjetas tan simples, en mi opinion las haria completamente clickeables. Si tuvieran un abstracto, o hashtags, haria que solo el titulo y la imagen lleven a la nota. En este caso haremos toda la tarjeta clickeable.
+4. Simplemente, con mediaqueries vamos a adaptar la estructura a la pantalla.
+5. No usaria bootstrap para algo tan simple, es cargar la pagina con cosas que no hacen falta, y nos va a quitar performance. Simplemente con CSS media queries y flexbox vamos a lograr esto. En pantallas grandes, se ven en fila, en pantallas menos anchas en columnas.
+6. Esto es simple, importamos al CSS el font que queremos de google fonts. Con esto estaría listo el ejercicio.
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
 
-Instead, it will copy all the configuration files and the transitive dependencies (Webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
-
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/code-splitting
-
-### Analyzing the Bundle Size
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size
-
-### Making a Progressive Web App
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app
-
-### Advanced Configuration
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/advanced-configuration
-
-### Deployment
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/deployment
-
-### `yarn build` fails to minify
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify
