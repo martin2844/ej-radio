@@ -1,6 +1,7 @@
 import React, {useState, useEffect} from 'react';
 import './App.scss';
 import Navbar from './components/navbar';
+import {Helmet} from "react-helmet";
 import Card from './components/cards';
 
 import axios from 'axios';
@@ -34,6 +35,10 @@ function App() {
 
   return (
     <div>
+              <Helmet>
+                <meta charSet="utf-8" />
+                <title>Ej Radio | Martin Chammah</title>
+            </Helmet>
       <Navbar/>
       <section className='main-container'>
       {cardMap}

@@ -39,6 +39,7 @@ Hacer el ejercicio, me llevo 1.30 hs, principalmente el SCSS, para dejarlo aprox
 
 Aquí un detalle del tiempo:
 
-![Tiempo](.public/images/tiempo.png)
+![Tiempo](https://github.com/martin2844/ej-radio/blob/master/public/images/tiempo.png)
+
 
 
