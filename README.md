@@ -32,3 +32,13 @@ La información de las notas a mostrar se debe levantar directamente desde este 
 6. Esto es simple, importamos al CSS el font que queremos de google fonts. Con esto estaría listo el ejercicio.
 
 
+# Finalmente.
+
+
+Hacer el ejercicio, me llevo 1.30 hs, principalmente el SCSS, para dejarlo aproximadamente parecido a la pagina de radio mitre.
+
+Aquí un detalle del tiempo:
+
+![Tiempo](.public/images/tiempo.png)
+
+

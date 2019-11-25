@@ -1,0 +1,21 @@
+// archivo scss para mostrar utilización de SCSS.
+
+@import url('https://fonts.googleapis.com/css?family=Istok+Web:400,700,400italic,700italic');
+
+html {
+  padding: 0;
+  margin: 0;
+}
+
+
+
+
+.main-container {
+  padding: 3rem;
+  font-family: 'Istok Web', sans-serif;
+  display:flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
